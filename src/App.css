@@ -181,22 +181,14 @@ button:active {
   height: 100%;
   opacity: 0;
   cursor: pointer;
-}ㄴ
+}
 
 /* book cover */
 
 .book-cover {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   background: #eee;
-}
-
-.BookCover {
-  width: 128;
-  height: 193;
-  background-image:
-    'url("http://books.google.com/books/content?id=uu1mC6zWNTwC&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73pGHfBNSsJG9Y8kRBpmLUft9O4BfItHioHolWNKOdLavw-SLcXADy3CPAfJ0_qMb18RmCa7Ds1cTdpM3dxAGJs8zfCfm8c6ggBIjzKT7XR5FIB53HHOhnsT7a0Cc-PpneWq9zX&source=gbs_api")';
-}
-  
+}  
 
 .book-cover-title {
   padding: 20px 10px 0;

@@ -8,15 +8,8 @@ class SelectList extends Component {
     shelf: propTypes.string,
     onMoveBook: propTypes.func.isRequired,
   };
-  // state = {
-  //   value: this.props.shelf,
-  // };
 
   change = (event) => {
-    // this.setState(() => ({
-    //   value: event.target.value,
-    // }));
-    // console.log("it is changed to ", this.state.value);
     this.props.onMoveBook(this.props.book, event.target.value);
   };
 
