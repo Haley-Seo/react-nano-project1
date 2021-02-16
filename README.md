@@ -4,6 +4,12 @@ Main Page(/) shows your bookshelf.
 Search Page(/search) shows search results you can add to your bookshelf.
 You can move books between shelves and move away from your bookshelf.
 
+# How to Start
+
+Fork / Clone to your local repository / PC
+'npm install' to install all dependent npms
+'npm start' to run React app
+
 # Components
 
 - ListBooks - component for main page(/)

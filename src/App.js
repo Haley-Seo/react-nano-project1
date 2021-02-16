@@ -16,11 +16,10 @@ class BooksApp extends Component {
      */
   };
 
-  componentDidMount() {
-    BooksAPI.getAll().then((books) => {
-      this.setState(() => ({
-        myBooks: [...books],
-      }));
+  async componentDidMount() {
+    const books = await BooksAPI.getAll();
+    this.setState({
+      myBooks: [...books],
     });
   }
 
