@@ -17,10 +17,7 @@ class Book extends Component {
     // console.log("books in the book render", this.props.book);
     let authors;
     if (this.props.book.authors !== undefined) {
-      authors = this.props.book.authors.reduce(
-        (acc, author) => (acc += "," + author),
-        ""
-      );
+      authors = this.props.book.authors.join(", ");
     }
 
     return (

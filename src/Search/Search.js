@@ -19,19 +19,26 @@ class Search extends Component {
 
   searchBook = (query) => {
     this.setState(() => ({
-      query: query.trim(),
+      query: query,
     }));
     if (query.length > 0) {
       BooksAPI.search(query).then((results) => {
         // console.log("results", results);
         const myBooks = this.props.myBooks;
         if (results !== undefined && results.length) {
-          for (let j = 0; j < myBooks.length; j++) {
-            for (let i = 0; i < results.length; i++) {
-              if (results[i].id === myBooks[j].id)
-                results[i].shelf = myBooks[j].shelf;
-            }
-          }
+          results = results.map((book) => {
+            const bookOnShelf = myBooks.find(({ id }) => id === book.id);
+            return {
+              ...book,
+              shelf: bookOnShelf ? bookOnShelf.shelf : "none",
+            };
+          });
+          // for (let j = 0; j < myBooks.length; j++) {
+          //   for (let i = 0; i < results.length; i++) {
+          //     if (results[i].id === myBooks[j].id)
+          //       results[i].shelf = myBooks[j].shelf;
+          //   }
+          // }
           this.setState(() => ({
             books: [...results],
           }));
